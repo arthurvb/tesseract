@@ -54,7 +54,8 @@ namespace InteropDotNet
                     if (dllHandle != IntPtr.Zero)
                         loadedAssemblies[fileName] = dllHandle;
                     else
-                        throw new DllNotFoundException(string.Format("Failed to find library \"{0}\" for platform {1}.", fileName, platformName));
+                        throw new DllNotFoundException(string.Format("Failed to find library \"{0}\" for platform {1} using logic {2}.", fileName, 
+                        platformName, logic.GetType().Name));
                 }
 
                 return loadedAssemblies[fileName];
@@ -193,7 +194,7 @@ namespace InteropDotNet
                             break;
                         case OperatingSystem.MacOSX:
                             Logger.TraceInformation("Current OS: MacOsX");
-                            instance = new LibraryLoader(new UnixLibraryLoaderLogic());
+                            instance = new LibraryLoader(new OSXLibraryLoaderLogic());
                             break;
                         default:
                             throw new Exception("Unsupported operation system");
