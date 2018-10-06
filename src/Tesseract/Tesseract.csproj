@@ -5,7 +5,7 @@
   <PropertyGroup>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>Tesseract</PackageId>
+    <PackageId>Tesseract-test</PackageId>
     <Authors>Charles Weld</Authors>
     <Company />
     <Product>Tesseract</Product>
@@ -15,7 +15,7 @@
     <PackageProjectUrl>https://github.com/charlesw/tesseract/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/charlesw/tesseract/</RepositoryUrl>
     <PackageTags>Tesseract Ocr</PackageTags>
-    <Version>4.0.0.0-beta3</Version>
+    <Version>4.0.0.0-beta8</Version>
     <AssemblyVersion>4.0.0.0</AssemblyVersion>
     <NeutralLanguage></NeutralLanguage>
     <PackageLicenseUrl>http://www.apache.org/licenses/LICENSE-2.0</PackageLicenseUrl>
@@ -53,13 +53,16 @@
     <Folder Include="x86\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="x64\*.dll" Pack="true" PackageCopyToOutput="true" PackagePath="x64">
+    <Content Include="x64\*.dll" Pack="true" PackageCopyToOutput="true" PackagePath="lib\x64">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="x86\*.dll" Pack="true" PackageCopyToOutput="true" PackagePath="x86">
+    <Content Include="x64\*.dylib" Pack="true" PackageCopyToOutput="true" PackagePath="lib\x64">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Tesseract.targets" Pack="true" PackageCopyToOutput="true" PackagePath="build/">
+    <Content Include="x86\*.dll" Pack="true" PackageCopyToOutput="true" PackagePath="lib\x86">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Tesseract-test.targets" Pack="true" PackageCopyToOutput="true" PackagePath="build/">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
