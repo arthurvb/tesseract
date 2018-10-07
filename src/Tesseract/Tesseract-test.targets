@@ -18,11 +18,11 @@
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
         <None Include="$(MSBuildThisFileDirectory)\..\lib\x64\liblept1760.dylib">
-            <Link>x64\liblept1760.dll</Link>
+            <Link>x64\liblept1760.dylib</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
         <None Include="$(MSBuildThisFileDirectory)\..\lib\x64\libtesseract400.dylib">
-            <Link>x64\libtesseract400.dll</Link>
+            <Link>x64\libtesseract400.dylib</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
     </ItemGroup>
