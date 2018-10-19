@@ -25,5 +25,13 @@
             <Link>x64\libtesseract400.dylib</Link>
             <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
         </None>
+        <None Include="$(MSBuildThisFileDirectory)\..\lib\x64\liblept1760.so">
+            <Link>x64\liblept1760.so</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="$(MSBuildThisFileDirectory)\..\lib\x64\libtesseract400.so">
+            <Link>x64\libtesseract400.so</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
 </Project>
